@@ -16,10 +16,10 @@ public class Anfibio extends Animal {
 		this.venenoso = venenoso;
 		cantidadAnfibios++;
 	}
-	public Anfibio(String colorPiel, boolean venenoso, String habitat) {
-		
+	public Anfibio() {
+		super("",0,"","");
+		cantidadAnfibios++;
 	}
-	public Anfibio() {}
 	
 	public String getColorPiel() {
 		return this.colorPiel;

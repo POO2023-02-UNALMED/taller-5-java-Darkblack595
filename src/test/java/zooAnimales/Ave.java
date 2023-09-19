@@ -14,7 +14,10 @@ public class Ave extends Animal {
 		this.colorPlumas = colorPlumas;
 		cantidadAves++;
 	}
-	public Ave() {}
+	public Ave() {
+		super("",0,"","");
+		cantidadAves++;
+	}
 	
 	public String getColorPlumas() {
 		return this.colorPlumas;

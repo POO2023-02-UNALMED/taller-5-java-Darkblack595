@@ -16,11 +16,10 @@ public class Reptil extends Animal {
 		this.largoCola = largoCola;
 		cantidadReptiles++;
 	}
-	public Reptil(String colorEscamas, int largoCola, String habitat) {
-		this.colorEscamas = colorEscamas;
-		this.largoCola = largoCola;
+	public Reptil() {
+		super("",0,"","");
+		cantidadReptiles++;
 	}
-	public Reptil() {}
 	
 	public String getColorEscamas() {
 		return this.colorEscamas;

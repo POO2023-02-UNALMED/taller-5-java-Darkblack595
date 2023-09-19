@@ -16,7 +16,10 @@ public class Mamifero extends Animal{
 		this.patas = patas;
 		cantidadMamiferos++;
 	}
-	public Mamifero() {}
+	public Mamifero() {
+		super("",0,"","");
+		cantidadMamiferos++;
+	}
 	
 	public boolean isPelaje() {
 		return this.pelaje;

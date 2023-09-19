@@ -16,11 +16,10 @@ public class Pez extends Animal {
 		this.cantidadAletas = cantidadAletas;
 		cantidadPeces++;
 	}
-	public Pez(String colorEscamas, int cantidadAletas, String habitat) {
-		this.colorEscamas = colorEscamas;
-		this.cantidadAletas = cantidadAletas;
+	public Pez() {
+		super("",0,"","");
+		cantidadPeces++;
 	}
-	public Pez() {}
 	
 	public String getColorEscamas() {
 		return this.colorEscamas;
