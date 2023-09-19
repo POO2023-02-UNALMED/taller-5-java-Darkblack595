@@ -1,33 +1,28 @@
 package zooAnimales;
 
 import gestion.Zona;
-import java.util.ArrayList;
 
 public class Animal {
-	private int totalAnimales;
+	private static int totalAnimales = 0;
 	private String nombre;
-	private int edad;
+	private int edad = 0;
 	private String habitat;
 	private String genero;
-	private Zona[] zona  = new Zona[1];
+	private static Zona zona;
 	
-	public Animal(int totalAnimales, String nombre, int edad, String habitat, String genero, Zona[] zona) {
-		this.totalAnimales = totalAnimales;
+	public Animal() {}
+	
+	public Animal(String nombre, int edad, String habitat, String genero) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;
 		this.genero = genero;
-		this.zona = zona;
 	}
-	public Animal() {}
 	
 	public int getTotalAnimales(){
-		return this.totalAnimales;
+		return totalAnimales;
 	}
-	public void setTotalAnimales(int totalAnimales){
-		this.totalAnimales = totalAnimales;
-	}
-	
+
 	public String getNombre(){
 		return this.nombre;
 	}
@@ -56,13 +51,15 @@ public class Animal {
 		this.genero = genero;
 	}
 	
-	public Zona[] getZona(){
-		return this.zona;
-	}
-	public void setZona(Zona[] zona) {
-		this.zona = zona;
+	public Zona getZona(){
+		return zona;
 	}
 	
+	public static String totalPorTipo() {
+		return "Mamiferos: " + Mamifero.cantidadMamiferos()+"\n"+"Aves: "+Ave.cantidadAves()+"\n"+"Reptiles: "+Reptil.cantidadReptiles()+
+				"\n"+"Peces: "+Pez.cantidadPeces()+"\n"+"Anfibios: "+Anfibio.cantidadAnfibios();
+	}
+
 	public String toString() {
 		return "Mi nombre es " + this.getNombre() + " tengo una edad de"+ this.getEdad() +", habito en"+ this.getHabitat() + " y mi genero es "+
 				this.getGenero();
