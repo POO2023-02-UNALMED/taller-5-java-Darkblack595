@@ -13,10 +13,7 @@ public class Zona {
 		this.nombre = nombre;
 		this.zoo = zoo;
 	}
-	public Zona() {
-		this.zoo = new Zoologico();
-		this.nombre = "";
-	}
+	public Zona() {}
 	
 	public String getNombre(){
 		return this.nombre;
