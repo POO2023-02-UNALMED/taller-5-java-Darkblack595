@@ -11,7 +11,10 @@ public class Zoologico {
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;
 	}
-	public Zoologico() {}
+	public Zoologico() {
+		this.nombre = "";
+		this.ubicacion = "";
+	}
 	
 	public String getNombre(){
 		return this.nombre;
