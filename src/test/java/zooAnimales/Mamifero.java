@@ -9,15 +9,20 @@ public class Mamifero extends Animal{
 	private boolean pelaje;
 	private int patas = 0;
 	private static int cantidadMamiferos = 0;
+	static {
+		listado = new ArrayList<Mamifero>();
+	}
 	
 	public Mamifero(String nombre, int edad, String habitat, String genero, boolean pelaje, int patas) {
 		super(nombre,edad,habitat,genero);
 		this.pelaje = pelaje;
 		this.patas = patas;
+		listado.add(this);
 		cantidadMamiferos++;
 	}
 	public Mamifero() {
 		super("",0,"","");
+		listado.add(this);
 		cantidadMamiferos++;
 	}
 	

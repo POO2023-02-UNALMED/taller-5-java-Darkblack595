@@ -9,15 +9,20 @@ public class Reptil extends Animal {
 	private String colorEscamas;
 	private int largoCola = 0;
 	private static int cantidadReptiles = 0;
+	static {
+		listado = new ArrayList<Reptil>();
+	}
 	
 	public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
 		super(nombre,edad,habitat,genero);
 		this.colorEscamas = colorEscamas;
 		this.largoCola = largoCola;
+		listado.add(this);
 		cantidadReptiles++;
 	}
 	public Reptil() {
 		super("",0,"","");
+		listado.add(this);
 		cantidadReptiles++;
 	}
 	
