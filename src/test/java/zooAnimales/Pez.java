@@ -47,7 +47,7 @@ public class Pez extends Animal {
 	}
 	public static Pez crearBacalao(String nombre, int edad, String genero) {
 		Pez bacalao = new Pez(nombre,edad,"oceano",genero,"gris",6);
-		salmones++;
+		bacalaos++;
 		listado.add(bacalao);
 		return bacalao;
 	}
